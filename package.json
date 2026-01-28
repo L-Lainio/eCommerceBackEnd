@@ -4,10 +4,9 @@
   "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![It's Me](https://img.shields.io/badge/Lora-Lainio-4baaaa.svg)]",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "watch": "nodemon server.js",
-    "seed": "node seeds/index.js"
+    "seed": "node seeds/index.js",
+    "test": "jest --watchAll=false --detectOpenHandles"
   },
   "repository": {
     "type": "git",
@@ -17,7 +16,9 @@
   "author": "LLainio",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.11",
+    "supertest": "^7.2.2"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
