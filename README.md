@@ -4,7 +4,9 @@
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ---
@@ -15,10 +17,11 @@ This application serves as the back-end engine for an e-commerce platform. It le
 ---
 
 ## ✨ Features
-- **Full CRUD Functionality:** Create, Read, Update, and Delete for Categories, Products, and Tags.
-- **Relational Data:** Complex associations (One-to-Many and Many-to-Many).
-- **Environment Security:** Sensitive data managed via `.env` variables.
-- **Containerized:** Ready for deployment or local development with Docker.
+- **Full CRUD Functionality:** Robust API endpoints for Categories, Products, and Tags.
+- **Relational Data Modeling:** Implements Many-to-Many relationships via junction tables (ProductTags) and One-to-Many associations.
+- **Environment Security:** Secured using `dotenv` and a `.dockerignore` strategy to protect sensitive credentials.
+- **Containerized Architecture:** Fully Dockerized for seamless development-to-production parity.
+- **Automated Testing Suite:** Integrated **Jest** and **Supertest** for high-confidence route verification.
 
 ---
 
@@ -110,43 +113,3 @@ docker-compose down
 - In production, use `.env` files and never commit them to version control
 
 ---
-
-## Walkthrough Video
-![](/assets/Zight%20Recording%202024-6-3%20at%209.11.13%20PM.mp4)
-![](/assets/Zight%202024-6-3%20at%209.19.52%20PM.png)
-![](/assets/Zight%202024-6-3%20at%209.19.31%20PM.png)
-
-## Installation 💻
-Ensure you are in the develop directory, type npm run seed then npm start
-
-## Usage 🏆
-A working backend of an e-commerce site
-
-## Contributing 😃
-Support from TA's Github users youtube tutorials
-
-## Tests 🧪
-Tested the GET, PUT, POST and DELETE routes numerous times
-To run tests, run these commands:
-```
-npm test
-```
-
-
-## Description
-
-This application allows the user to create a preset database and then connect to it via API calls and perform operations on the different entries.
-
-There are tables for:
-
-- Categories
-- Products
-- Tags
-
-The user can perform various CRUD operations on these tables via API calls:
-
-- GET routes to return all categories, all products, and all tags
-- GET routes to return a single category, single product, and single tag
-- POST routes to create a new category, new product, and new tag
-- PUT routes to update a product tag id and update a category or tag name
-- DELETE routes to delete a single category, single product, and single tag
